@@ -14,6 +14,9 @@
   --box-line: #eeeeee;
   --team-color: #f5f4fa;
 }
+html {
+  background-color: #e5e5e5;
+}
 
 h1,
 h2,
@@ -34,6 +37,9 @@ body {
   font-weight: 400;
   font-size: 14px;
   background-color: #ffffff;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container {
   width: 1200px;
@@ -92,7 +98,7 @@ body {
 }
 .site-nav-link:hover,
 .site-nav-link:focus,
-.site-nav-link:active {
+.site-nav-link::before {
   color: var(--logo-button-color);
 }
 .site-address {
@@ -129,8 +135,16 @@ body {
   background-color: var(--title-footer);
   padding: 200px 0;
   text-align: center;
+  background-image: url("../images/portfolio/hero-background.jpg");
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  /* background-image: repeating-linear-gradient(rgba(47, 48, 58, 0.4)); */
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: none;
 }
-
+.main-container {
+}
 .site-title {
   font-weight: 900;
   font-size: 44px;
@@ -152,6 +166,7 @@ body {
   padding: 10px 32px;
   border-radius: 4px;
   border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .specifics {
@@ -213,6 +228,9 @@ body {
 }
 .team-person {
   background-color: var(--brand-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-person:nth-child(-n + 3) {
   margin-right: 30px;
@@ -237,9 +255,17 @@ body {
 
 /* PORTFOLIO */
 .filter-button:hover,
-.filter-button:focus.filter-button::before {
+.filter-button:focus,
+.filter-button::before {
   background-color: var(--logo-button-color);
   color: var(--brand-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.filter-portfolio:hover,
+.filter-portfolio:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .filter-list-button {
   display: flex;
