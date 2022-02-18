@@ -294,13 +294,13 @@ body {
   border-radius: 50%;
   padding: 12px;
 }
-.team-icon {
+.team-icon-svg {
   fill: #afb1b8;
   background-color: var(--brand-background-color);
 }
 .team-button-icon:hover,
-.team-button-icon:focus .team-icon:hover,
-.team-icon:focus {
+.team-button-icon:focus .team-icon-svg:hover,
+.team-icon-svg:focus {
   background-color: var(--icon-color);
   fill: var(--icon-color);
 }
@@ -410,7 +410,7 @@ body {
 /* FOOTER */
 .footer {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   background: var(--title-footer);
   padding: 60px 0;
 }
