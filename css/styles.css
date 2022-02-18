@@ -99,8 +99,9 @@ body {
 }
 .site-nav-link:hover,
 .site-nav-link:focus,
-.header-address-logo:hover {
+.header-address-logo::before {
   color: var(--logo-button-color);
+  fill: var(--logo-button-color);
 }
 .header-address {
   display: flex;
@@ -108,12 +109,14 @@ body {
   justify-content: center;
   margin-left: auto;
 }
-.header-contact {
-}
 .header-contact:nth-child(n + 2) {
   margin-left: 30px;
 }
-
+.header-address-logo {
+  display: inline-flex;
+  align-items: center;
+  fill: var(--logo-button-color);
+}
 .site-address-link {
   text-decoration: none;
   font-style: normal;
@@ -281,6 +284,8 @@ body {
   padding: 16px 32px 0px 32px;
 }
 .team-icon {
+  display: flex;
+  align-items: center;
   margin-right: 10px;
 }
 .team-icon:nth-child(n + 4) {
@@ -288,21 +293,22 @@ body {
 }
 
 .team-button-icon {
-  cursor: pointer;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--brand-background-color);
   border-radius: 50%;
   padding: 12px;
 }
 .team-icon-svg {
-  fill: #afb1b8;
   background-color: var(--brand-background-color);
 }
 .team-button-icon:hover,
-.team-button-icon:focus .team-icon-svg:hover,
+.team-icon-svg:hover,
+.team-button-icon:focus,
 .team-icon-svg:focus {
-  background-color: var(--icon-color);
-  fill: var(--icon-color);
+  fill: #2196f3;
+  background-color: #2196f3;
 }
 
 .clients-section {
@@ -330,15 +336,26 @@ body {
   margin-right: 0;
 }
 .clients-button-icon {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   border: none;
   background-color: var(--brand-background-color);
   padding: 16px 32px;
-  /* border: 1px solid #afb1b8; */
+  border: 1px solid #afb1b8;
+}
+.client-icon-logo {
+  display: flex;
+  align-items: center;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 .clients-button-icon:hover,
 .clients-button-icon:focus {
-  background-color: var(--logo-button-color);
+  fill: #2196f3;
+  stroke: #2196f3;
+  border: 1px solid #2196f3;
 }
 /* PORTFOLIO */
 .filter-button:hover,
@@ -485,7 +502,14 @@ body {
 .footer-icon:nth-child(n + 4) {
   margin-right: 0px;
 }
+.footer-icon-logo {
+  fill: rgba(255, 255, 255, 100%);
+  background-color: rgba(255, 255, 255, 10%);
+}
 .footer-icon:hover,
-.footer-icon:focus {
+.footer-icon-logo:hover,
+.footer-icon:focus,
+.footer-icon-logo:focus {
   background-color: var(--logo-button-color);
+  fill: var(--logo-button-color);
 }
