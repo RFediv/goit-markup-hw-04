@@ -336,9 +336,7 @@ body {
   display: flex;
   margin-right: 30px;
 }
-.clients-icon {
-  margin-right: 30px;
-}
+
 .clients-icon:nth-child(n + 7) {
   margin-right: 0;
 }
