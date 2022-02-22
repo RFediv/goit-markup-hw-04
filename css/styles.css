@@ -13,10 +13,10 @@
   --black-color: #000000;
   --box-line: #eeeeee;
   --team-color: #f5f4fa;
-  --icon-color: #2196f3;
+  --icon-color: #afb1b8;
 }
 html {
-  background-color: #e5e5e5;
+  /* background-color: #e5e5e5; */
 }
 
 h1,
@@ -96,7 +96,7 @@ body {
 }
 .site-nav-link:hover,
 .site-nav-link:focus,
-.header-address-logo::before {
+.site-nav-link::before {
   color: var(--logo-button-color);
   fill: var(--logo-button-color);
 }
@@ -303,14 +303,17 @@ body {
   padding: 12px;
 }
 .team-icon-svg {
-  fill: var(--other-color);
+  fill: var(--icon-color);
 }
 .team-button-icon:hover,
-.team-button-icon:focus {
-  background-color: var(--icon-color);
+.team-button-icon:focus,
+.team-button-icon:hover .team-icon-svg,
+.team-button-icon:focus .team-icon-svg {
+  background-color: var(--logo-button-color);
   fill: var(--brand-background-color);
 }
 
+/* CLIENTS* */
 .clients-section {
   background-color: var(--brand-background-color);
   text-align: center;
@@ -354,17 +357,19 @@ body {
 .client-icon-logo {
   display: inline-flex;
   border: none;
-  fill: var(--other-color);
+  fill: var(--icon-color);
 }
 
-.client-icon-logo:hover,
-.client-icon-logo:focus {
-  fill: var(--icon-color);
+.clients-button-icon:hover .client-icon-logo,
+.clients-button-icon:focus .client-icon-logo {
+  fill: var(--logo-button-color);
 }
 .clients-button-icon:hover,
 .clients-button-icon:focus {
-  border: 1px solid var(--icon-color);
+  border: 1px solid var(--logo-button-color);
 }
+
+/* PORTFOLIO* */
 .filter-button:hover,
 .filter-button:focus,
 .filter-button::before {
@@ -517,12 +522,12 @@ body {
   margin-right: 0px;
 }
 .footer-icon-logo {
-  fill: currentColor;
+  fill: var(--brand-background-color);
 }
 .footer-icon:hover,
 .footer-icon-logo:hover,
 .footer-icon:focus,
 .footer-icon-logo:focus {
-  fill: var(--icon-color);
-  background-color: var(--icon-color);
+  fill: var(--brand-background-color);
+  background-color: var(--logo-button-color);
 }
