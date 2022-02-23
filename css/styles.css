@@ -96,10 +96,11 @@ body {
 }
 .site-nav-link:hover,
 .site-nav-link:focus,
-.site-nav-link::before {
+.site-nav .site-nav-link:active {
   color: var(--logo-button-color);
   fill: var(--logo-button-color);
 }
+
 .header-address {
   display: flex;
   align-items: center;
@@ -136,6 +137,9 @@ body {
 .site-address-link::before {
   color: var(--logo-button-color);
   fill: var(--logo-button-color);
+}
+.active {
+  color: var(--logo-button-color);
 }
 
 .line-header {
@@ -268,12 +272,14 @@ body {
   font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 .team-position {
   font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--other-color);
+  margin-bottom: 16px;
 }
 
 .team-icon-box {
@@ -282,7 +288,6 @@ body {
   justify-content: center;
   list-style: none;
   text-align: center;
-  padding: 16px 32px 0px 32px;
 }
 .team-icon {
   display: flex;
